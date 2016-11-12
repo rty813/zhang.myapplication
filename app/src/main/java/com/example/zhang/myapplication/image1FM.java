@@ -18,6 +18,6 @@ public class image1FM extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         ImageView iv = new ImageView(getActivity());
         iv.setImageResource(R.drawable.image2);
-        return iv;//what the fuck
+        return iv;
     }
 }
