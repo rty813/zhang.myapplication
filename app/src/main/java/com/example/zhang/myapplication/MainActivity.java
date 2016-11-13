@@ -1,6 +1,10 @@
 package com.example.zhang.myapplication;
 
 import android.content.Intent;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -9,9 +13,10 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     private int num;
     private TextView Tv;
+    private SensorManager mSensorManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +41,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
+        mSensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
+
 
         Tv = (TextView) findViewById(R.id.textview);
         findViewById(R.id.button).setOnClickListener(this);
@@ -43,7 +50,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btnSend).setOnClickListener(this);
         findViewById(R.id.btnStartSliderActivity).setOnClickListener(this);
         findViewById(R.id.btnStartTabsActivity).setOnClickListener(this);
+        findViewById(R.id.btnStartSensor).setOnClickListener(this);
     }
+
 
     @Override
     public void onClick(View view) {
@@ -65,6 +74,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Toast.makeText(this,"再见",Toast.LENGTH_SHORT).show();
                 finish();
                 break;
+            case R.id.btnStartSensor:
+                startActivity(new Intent(MainActivity.this,SensorActivity.class));
+                break;
         }
     }
+
 }
