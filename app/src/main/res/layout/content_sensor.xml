@@ -17,31 +17,48 @@
         android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/Sensor_Proximity_textview"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="124dp"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="130dp"
-        android:id="@+id/Sensor_Proximity_textview" />
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Sensor_Proximity_textview"
-        android:layout_alignLeft="@+id/Sensor_Proximity_textview"
-        android:layout_alignStart="@+id/Sensor_Proximity_textview"
-        android:layout_marginTop="101dp"
-        android:id="@+id/Sensor_Accelerometer_textview" />
+        android:layout_marginTop="31dp"
+        android:id="@+id/Sensor_Accelerometer_textview"
+        android:layout_below="@+id/Sensor_Pressure_Textview"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/Sensor_Pressure_Textview"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/Sensor_Proximity_textview"
+        android:layout_toEndOf="@+id/Sensor_Proximity_textview"
+        android:layout_marginLeft="76dp"
+        android:layout_marginStart="76dp" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Sensor_Light_Textview"
+        android:layout_below="@+id/Sensor_Pressure_Textview"
+        android:layout_alignLeft="@+id/Sensor_Pressure_Textview"
+        android:layout_alignStart="@+id/Sensor_Pressure_Textview" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:id="@+id/Sensor_Gravity_TextView"
         android:layout_below="@+id/Sensor_Accelerometer_textview"
-        android:layout_alignLeft="@+id/Sensor_Accelerometer_textview"
-        android:layout_alignStart="@+id/Sensor_Accelerometer_textview"
-        android:layout_marginTop="74dp"
-        android:id="@+id/Sensor_Gravity_TextView" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>
