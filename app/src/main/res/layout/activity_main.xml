@@ -11,24 +11,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.zhang.myapplication.MainActivity">
 
-    <Button
-        android:text="EXIT"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="151dp"
-        android:id="@+id/button" />
-
-    <Button
-        android:text="change"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button"
-        android:id="@+id/btnchange" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,16 +19,6 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="85dp" />
-
-    <Button
-        android:text="发送消息"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/btnchange"
-        android:layout_alignRight="@+id/btnchange"
-        android:layout_alignEnd="@+id/btnchange"
-        android:layout_marginBottom="11dp"
-        android:id="@+id/btnSend" />
 
     <Button
         android:text="启动SliderActivity"
@@ -70,12 +42,44 @@
         android:id="@+id/btnStartTabsActivity" />
 
     <Button
+        android:text="发送消息"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSend"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/btnStartTabsActivity"
+        android:layout_alignStart="@+id/btnStartTabsActivity"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp" />
+
+    <Button
         android:text="传感器测试"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/btnStartSensor"
         android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button"
-        android:id="@+id/btnStartSensor" />
+        android:layout_toLeftOf="@+id/textview"
+        android:layout_toStartOf="@+id/textview" />
+
+    <Button
+        android:text="change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnchange"
+        android:layout_alignBaseline="@+id/textview"
+        android:layout_alignBottom="@+id/textview"
+        android:layout_alignRight="@+id/btnStartSliderActivity"
+        android:layout_alignEnd="@+id/btnStartSliderActivity" />
+
+    <Button
+        android:text="蓝牙技术"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnStartSliderActivity"
+        android:layout_alignRight="@+id/btnStartSliderActivity"
+        android:layout_alignEnd="@+id/btnStartSliderActivity"
+        android:layout_marginRight="33dp"
+        android:layout_marginEnd="33dp"
+        android:id="@+id/btnStartBluetooth" />
 
 </RelativeLayout>
