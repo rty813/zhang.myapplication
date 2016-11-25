@@ -45,18 +45,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         Tv = (TextView) findViewById(R.id.textview);
-        findViewById(R.id.button).setOnClickListener(this);
         findViewById(R.id.btnchange).setOnClickListener(this);
         findViewById(R.id.btnSend).setOnClickListener(this);
         findViewById(R.id.btnStartSliderActivity).setOnClickListener(this);
         findViewById(R.id.btnStartTabsActivity).setOnClickListener(this);
         findViewById(R.id.btnStartSensor).setOnClickListener(this);
+        findViewById(R.id.btnStartBluetooth).setOnClickListener(this);
     }
 
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
+            case R.id.btnStartBluetooth:
+                startActivity(new Intent(MainActivity.this,BluetoothActivity.class));
+                break;
             case R.id.btnStartSliderActivity:
                 startActivity(new Intent(MainActivity.this,SliderActivity.class));
                 break;
@@ -69,10 +72,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnchange:
                 Tv.setText(num+"");
                 num++;
-                break;
-            case R.id.button:
-                Toast.makeText(this,"再见",Toast.LENGTH_SHORT).show();
-                finish();
                 break;
             case R.id.btnStartSensor:
                 startActivity(new Intent(MainActivity.this,SensorActivity.class));
