@@ -16,10 +16,11 @@ public class BluetoothActivity extends AppCompatActivity implements View.OnClick
 
         findViewById(R.id.btnOpenBluetooth1).setOnClickListener(this);
         findViewById(R.id.btnOpenBluetooth2).setOnClickListener(this);
-
+        findViewById(R.id.btnShutBluetooth).setOnClickListener(this);
     }
 
     @Override
+    BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
     public void onClick(View view) {
         switch (view.getId())
         {
@@ -28,8 +29,10 @@ public class BluetoothActivity extends AppCompatActivity implements View.OnClick
                 startActivityForResult(enableIntent,1);
                 break;
             case R.id.btnOpenBluetooth2:
-                BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
                 adapter.enable();
+                break;
+            case R.id.btnShutBluetooth:
+                adapter.disable();
                 break;
         }
     }
