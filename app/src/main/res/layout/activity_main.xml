@@ -75,11 +75,12 @@
         android:text="蓝牙技术"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:id="@+id/btnStartBluetooth"
         android:layout_above="@+id/btnStartSliderActivity"
         android:layout_alignRight="@+id/btnStartSliderActivity"
         android:layout_alignEnd="@+id/btnStartSliderActivity"
-        android:layout_marginRight="33dp"
-        android:layout_marginEnd="33dp"
-        android:id="@+id/btnStartBluetooth" />
+        android:layout_marginBottom="16dp" />
 
 </RelativeLayout>
