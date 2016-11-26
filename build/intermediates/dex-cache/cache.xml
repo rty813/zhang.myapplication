@@ -39,6 +39,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/zhang/文档/AndroidStudioProject/zhang.myapplication/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ced4bfd3f86271de05767b1da276a6a5d0c523d7">
+        <dex dex="/home/zhang/文档/AndroidStudioProject/zhang.myapplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_a559a4664e366ab2ef7e8f5d9ed1ef330fafb9fa/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/zhang/文档/AndroidStudioProject/zhang.myapplication/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -54,15 +63,6 @@
         revision="25.0.0"
         sha1="07daa0b6e1d455c82a38422ffe287c18823d339a">
         <dex dex="/home/zhang/文档/AndroidStudioProject/zhang.myapplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.0.0_490823c2d3c9615d02d1903dd2726d2fddf5a212/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/zhang/文档/AndroidStudioProject/zhang.myapplication/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="8ef221dc2fe3762f1b696259d1582e33b0b4342b">
-        <dex dex="/home/zhang/文档/AndroidStudioProject/zhang.myapplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_a559a4664e366ab2ef7e8f5d9ed1ef330fafb9fa/classes.dex" />
     </item>
     <item
         is-multidex="true"

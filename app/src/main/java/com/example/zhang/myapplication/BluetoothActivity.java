@@ -145,7 +145,7 @@ public class BluetoothActivity extends AppCompatActivity implements View.OnClick
                 }
             }
             catch (Exception e){
-                Toast.makeText(BluetoothActivity.this,"ERROR",Toast.LENGTH_SHORT);
+                Toast.makeText(BluetoothActivity.this,"ERROR",Toast.LENGTH_SHORT).show();
             }
             if (os != null)
             {
@@ -153,7 +153,7 @@ public class BluetoothActivity extends AppCompatActivity implements View.OnClick
             }
         }
         catch (Exception e){
-            Toast.makeText(BluetoothActivity.this,"ERROR",Toast.LENGTH_SHORT);
+            Toast.makeText(BluetoothActivity.this,"ERROR",Toast.LENGTH_SHORT).show();
 
         }
     }
@@ -178,7 +178,7 @@ public class BluetoothActivity extends AppCompatActivity implements View.OnClick
                     int count = is.read(buffer);
                     Message msg = new Message();
                     msg.obj = new String(buffer, 0, count, "utf-8");
-                    Toast.makeText(BluetoothActivity.this, String.valueOf(msg.obj), Toast.LENGTH_SHORT);
+                    Toast.makeText(BluetoothActivity.this, String.valueOf(msg.obj), Toast.LENGTH_SHORT).show();
 
                 }
             } catch (IOException e) {

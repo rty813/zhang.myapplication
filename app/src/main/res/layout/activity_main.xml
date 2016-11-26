@@ -83,4 +83,13 @@
         android:layout_alignEnd="@+id/btnStartSliderActivity"
         android:layout_marginBottom="16dp" />
 
+    <Button
+        android:text="AsyncTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnStartBluetooth"
+        android:layout_alignLeft="@+id/btnSend"
+        android:layout_alignStart="@+id/btnSend"
+        android:id="@+id/btnStartAsyncTaskActivity" />
+
 </RelativeLayout>

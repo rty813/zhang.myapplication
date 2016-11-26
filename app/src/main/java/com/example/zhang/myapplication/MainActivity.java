@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btnStartTabsActivity).setOnClickListener(this);
         findViewById(R.id.btnStartSensor).setOnClickListener(this);
         findViewById(R.id.btnStartBluetooth).setOnClickListener(this);
+        findViewById(R.id.btnStartAsyncTaskActivity).setOnClickListener(this);
     }
 
 
@@ -75,6 +76,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnStartSensor:
                 startActivity(new Intent(MainActivity.this,SensorActivity.class));
+                break;
+            case R.id.btnStartAsyncTaskActivity:
+                startActivity(new Intent(MainActivity.this,AsyncTaskActivity.class));
                 break;
         }
     }
