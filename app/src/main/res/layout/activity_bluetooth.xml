@@ -32,4 +32,33 @@
         android:layout_marginRight="57dp"
         android:layout_marginEnd="57dp"
         android:id="@+id/btnOpenBluetooth2" />
+
+    <Button
+        android:text="关闭蓝牙"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:id="@+id/btnShutBluetooth"
+        android:layout_below="@+id/btnOpenBluetooth1"
+        android:layout_alignLeft="@+id/btnOpenBluetooth1"
+        android:layout_alignStart="@+id/btnOpenBluetooth1" />
+
+    <Button
+        android:text="搜索蓝牙设备"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSearchDevices"
+        android:layout_alignBaseline="@+id/btnShutBluetooth"
+        android:layout_alignBottom="@+id/btnShutBluetooth"
+        android:layout_alignRight="@+id/btnOpenBluetooth2"
+        android:layout_alignEnd="@+id/btnOpenBluetooth2" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lvDevices"
+        android:layout_below="@+id/btnShutBluetooth"
+        android:layout_alignLeft="@+id/btnShutBluetooth"
+        android:layout_alignStart="@+id/btnShutBluetooth"
+        android:layout_marginTop="34dp" />
 </RelativeLayout>

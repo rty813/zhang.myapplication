@@ -9,4 +9,5 @@
     <string name="title_activity_tabs">Tabs</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_sensor">SensorActivity</string>
+    <string name="title_activity_wi_fi_direct">WiFiDirectActivity</string>
 </resources>
