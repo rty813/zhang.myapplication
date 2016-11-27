@@ -29,7 +29,7 @@
         android:layout_alignLeft="@+id/btnHttpGet"
         android:layout_alignStart="@+id/btnHttpGet"
         android:scrollbars="vertical"
-        android:id="@+id/tvHttpGet" />
+        android:id="@+id/tvHttp" />
 
     <EditText
         android:layout_width="wrap_content"

@@ -23,6 +23,7 @@ public class HttpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_http);
+
         findViewById(R.id.btnHttpGet).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,7 +57,7 @@ public class HttpActivity extends AppCompatActivity {
 
                     @Override
                     protected void onPostExecute(String s) {
-                        TextView text = (TextView) findViewById(R.id.tvHttpGet);
+                        TextView text = (TextView) findViewById(R.id.tvHttp);
                         text.setMovementMethod(ScrollingMovementMethod.getInstance());
                         text.setText(s);
                         super.onPostExecute(s);

@@ -21,27 +21,6 @@
         android:layout_marginTop="85dp" />
 
     <Button
-        android:text="启动SliderActivity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnStartSliderActivity"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="72dp" />
-
-    <Button
-        android:text="启动TabsActivity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/btnStartSliderActivity"
-        android:layout_toRightOf="@+id/textview"
-        android:layout_toEndOf="@+id/textview"
-        android:layout_marginLeft="10dp"
-        android:layout_marginStart="10dp"
-        android:id="@+id/btnStartTabsActivity" />
-
-    <Button
         android:text="发送消息"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -72,43 +51,76 @@
         android:layout_alignEnd="@+id/btnStartSliderActivity" />
 
     <Button
-        android:text="蓝牙技术"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="16dp"
-        android:layout_marginEnd="16dp"
-        android:id="@+id/btnStartBluetooth"
-        android:layout_above="@+id/btnStartSliderActivity"
-        android:layout_alignRight="@+id/btnStartSliderActivity"
-        android:layout_alignEnd="@+id/btnStartSliderActivity"
-        android:layout_marginBottom="16dp" />
-
-    <Button
         android:text="AsyncTask"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/btnStartBluetooth"
-        android:layout_alignLeft="@+id/btnSend"
-        android:layout_alignStart="@+id/btnSend"
-        android:id="@+id/btnStartAsyncTaskActivity" />
-
-    <Button
-        android:text="Http"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/btnStartBluetooth"
-        android:layout_alignRight="@+id/btnStartBluetooth"
-        android:layout_alignEnd="@+id/btnStartBluetooth"
-        android:layout_marginBottom="12dp"
-        android:id="@+id/btnStartHttpActivity" />
+        android:id="@+id/btnStartAsyncTaskActivity"
+        android:layout_alignBaseline="@+id/btnStartBluetooth"
+        android:layout_alignBottom="@+id/btnStartBluetooth"
+        android:layout_alignLeft="@+id/btnStartSocketActivity"
+        android:layout_alignStart="@+id/btnStartSocketActivity" />
 
     <Button
         android:text="Exit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/btnchange"
-        android:layout_alignRight="@+id/btnStartAsyncTaskActivity"
-        android:layout_alignEnd="@+id/btnStartAsyncTaskActivity"
-        android:id="@+id/btnExit" />
+        android:id="@+id/btnExit"
+        android:layout_alignBaseline="@+id/textview"
+        android:layout_alignBottom="@+id/textview"
+        android:layout_alignLeft="@+id/btnStartTabsActivity"
+        android:layout_alignStart="@+id/btnStartTabsActivity" />
+
+    <Button
+        android:text="Socket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnStartSocketActivity"
+        android:layout_alignBaseline="@+id/btnStartHttpActivity"
+        android:layout_alignBottom="@+id/btnStartHttpActivity"
+        android:layout_alignLeft="@+id/btnStartTabsActivity"
+        android:layout_alignStart="@+id/btnStartTabsActivity" />
+
+    <Button
+        android:text="Http"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/btnStartHttpActivity"
+        android:layout_above="@+id/btnStartBluetooth"
+        android:layout_alignRight="@+id/btnStartSliderActivity"
+        android:layout_alignEnd="@+id/btnStartSliderActivity" />
+
+    <Button
+        android:text="TabsActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnStartTabsActivity"
+        android:layout_below="@+id/btnStartBluetooth"
+        android:layout_toRightOf="@+id/textview"
+        android:layout_toEndOf="@+id/textview"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp" />
+
+    <Button
+        android:text="Bluetooth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnStartBluetooth"
+        android:layout_marginBottom="23dp"
+        android:layout_above="@+id/btnStartSliderActivity"
+        android:layout_alignRight="@+id/btnStartHttpActivity"
+        android:layout_alignEnd="@+id/btnStartHttpActivity" />
+
+    <Button
+        android:text="SliderActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnStartSliderActivity"
+        android:layout_marginBottom="34dp"
+        android:layout_above="@+id/btnStartSensor"
+        android:layout_alignRight="@+id/btnStartSensor"
+        android:layout_alignEnd="@+id/btnStartSensor"
+        android:layout_marginRight="19dp"
+        android:layout_marginEnd="19dp" />
 
 </RelativeLayout>

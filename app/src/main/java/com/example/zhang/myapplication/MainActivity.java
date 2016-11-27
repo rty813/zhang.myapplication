@@ -54,40 +54,45 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btnStartAsyncTaskActivity).setOnClickListener(this);
         findViewById(R.id.btnStartHttpActivity).setOnClickListener(this);
         findViewById(R.id.btnExit).setOnClickListener(this);
+        findViewById(R.id.btnStartSocketActivity).setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.btnStartBluetooth:
-                startActivity(new Intent(MainActivity.this,BluetoothActivity.class));
-                break;
-            case R.id.btnStartSliderActivity:
-                startActivity(new Intent(MainActivity.this,SliderActivity.class));
-                break;
-            case R.id.btnStartTabsActivity:
-                startActivity(new Intent(MainActivity.this,Tabs.class));
-                break;
-            case R.id.btnSend:
-                sendBroadcast(new Intent(this,MyReceiver.class));
+            case R.id.btnExit:
+                System.exit(0);
                 break;
             case R.id.btnchange:
                 Tv.setText(num+"");
                 num++;
                 break;
+            case R.id.btnSend:
+                sendBroadcast(new Intent(this,MyReceiver.class));
+                break;
+            case R.id.btnStartBluetooth:
+                startActivity(new Intent(this,BluetoothActivity.class));
+                break;
+            case R.id.btnStartSliderActivity:
+                startActivity(new Intent(this,SliderActivity.class));
+                break;
+            case R.id.btnStartTabsActivity:
+                startActivity(new Intent(this,Tabs.class));
+                break;
             case R.id.btnStartSensor:
-                startActivity(new Intent(MainActivity.this,SensorActivity.class));
+                startActivity(new Intent(this,SensorActivity.class));
                 break;
             case R.id.btnStartAsyncTaskActivity:
-                startActivity(new Intent(MainActivity.this,AsyncTaskActivity.class));
+                startActivity(new Intent(this,AsyncTaskActivity.class));
                 break;
             case R.id.btnStartHttpActivity:
-                startActivity(new Intent(MainActivity.this,HttpActivity.class));
+                startActivity(new Intent(this,HttpActivity.class));
                 break;
-            case R.id.btnExit:
-                System.exit(0);
-                break;
+            case R.id.btnStartSocketActivity:
+                startActivity(new Intent(this,SocketActivity.class));
         }
     }
+
+
 
 }
