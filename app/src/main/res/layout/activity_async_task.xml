@@ -10,4 +10,36 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.zhang.myapplication.AsyncTaskActivity">
 
+    <Button
+        android:text="Read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/btnRead" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnRead"
+        android:scrollbars="vertical"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/tvAsyncTask" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textUri"
+        android:ems="10"
+        android:layout_alignBottom="@+id/btnRead"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="21dp"
+        android:layout_marginEnd="21dp"
+        android:id="@+id/editText"
+        android:contentDescription="请输入网址" />
+
 </RelativeLayout>
