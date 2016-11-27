@@ -52,6 +52,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btnStartSensor).setOnClickListener(this);
         findViewById(R.id.btnStartBluetooth).setOnClickListener(this);
         findViewById(R.id.btnStartAsyncTaskActivity).setOnClickListener(this);
+        findViewById(R.id.btnStartHttpActivity).setOnClickListener(this);
+        findViewById(R.id.btnExit).setOnClickListener(this);
     }
 
     @Override
@@ -78,6 +80,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnStartAsyncTaskActivity:
                 startActivity(new Intent(MainActivity.this,AsyncTaskActivity.class));
+                break;
+            case R.id.btnStartHttpActivity:
+                startActivity(new Intent(MainActivity.this,HttpActivity.class));
+                break;
+            case R.id.btnExit:
+                System.exit(0);
                 break;
         }
     }

@@ -44,7 +44,6 @@ public class AsyncTaskActivity extends AppCompatActivity {
                     URL url = new URL(arg0[0]);
                     URLConnection connection = url.openConnection();
                     long total = connection.getContentLength();
-
                     InputStream iStream = connection.getInputStream();
                     InputStreamReader isr = new InputStreamReader(iStream);
                     BufferedReader br = new BufferedReader(isr);

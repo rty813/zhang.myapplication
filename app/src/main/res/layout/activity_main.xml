@@ -92,4 +92,23 @@
         android:layout_alignStart="@+id/btnSend"
         android:id="@+id/btnStartAsyncTaskActivity" />
 
+    <Button
+        android:text="Http"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnStartBluetooth"
+        android:layout_alignRight="@+id/btnStartBluetooth"
+        android:layout_alignEnd="@+id/btnStartBluetooth"
+        android:layout_marginBottom="12dp"
+        android:id="@+id/btnStartHttpActivity" />
+
+    <Button
+        android:text="Exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnchange"
+        android:layout_alignRight="@+id/btnStartAsyncTaskActivity"
+        android:layout_alignEnd="@+id/btnStartAsyncTaskActivity"
+        android:id="@+id/btnExit" />
+
 </RelativeLayout>

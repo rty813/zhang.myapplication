@@ -48,7 +48,8 @@
             android:label="@string/title_activity_sensor"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".BluetoothActivity" />
-        <activity android:name=".AsyncTaskActivity"></activity>
+        <activity android:name=".AsyncTaskActivity" />
+        <activity android:name=".HttpActivity"></activity>
     </application>
 
 </manifest>
