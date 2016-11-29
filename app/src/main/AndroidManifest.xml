@@ -50,7 +50,12 @@
         <activity android:name=".BluetoothActivity" />
         <activity android:name=".AsyncTaskActivity" />
         <activity android:name=".HttpActivity" />
-        <activity android:name=".SocketActivity"></activity>
+        <activity android:name=".SocketActivity" />
+
+        <service
+            android:name=".SocketService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>
