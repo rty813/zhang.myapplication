@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btnStartHttpActivity).setOnClickListener(this);
         findViewById(R.id.btnExit).setOnClickListener(this);
         findViewById(R.id.btnStartSocketActivity).setOnClickListener(this);
+        findViewById(R.id.btnStartBaiduSpeechActivity).setOnClickListener(this);
     }
 
     @Override
@@ -90,6 +91,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnStartSocketActivity:
                 startActivity(new Intent(this,SocketActivity.class));
+                break;
+            case R.id.btnStartBaiduSpeechActivity:
+                startActivity(new Intent(this,BaiduSpeechActivity.class));
+                break;
         }
     }
 
