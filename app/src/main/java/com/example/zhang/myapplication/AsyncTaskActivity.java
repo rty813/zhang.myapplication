@@ -11,9 +11,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
@@ -41,8 +45,18 @@ public class AsyncTaskActivity extends AppCompatActivity {
             @Override
             protected String doInBackground(String... arg0) {
                 try {
-                    URL url = new URL(arg0[0]);
-                    URLConnection connection = url.openConnection();
+                    String urlString = arg0[0];
+
+                    URL url = new URL("http://202.117.255.187:8080/opac/openlink.php");
+                    HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+
+                    connection.setDoOutput(true);
+                    connection.setRequestMethod("POST");
+                    OutputStreamWriter osw = new OutputStreamWriter(connection.getOutputStream(),"utf-8");
+                    BufferedWriter bw = new BufferedWriter(osw);
+                    bw.write("strSearchType=title&strText=" + urlString);
+                    bw.flush();
+
                     long total = connection.getContentLength();
                     InputStream iStream = connection.getInputStream();
                     InputStreamReader isr = new InputStreamReader(iStream);
