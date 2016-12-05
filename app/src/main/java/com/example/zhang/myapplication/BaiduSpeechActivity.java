@@ -56,13 +56,7 @@ public class BaiduSpeechActivity extends Activity implements RecognitionListener
         speechRecognizer = SpeechRecognizer.createSpeechRecognizer(this, new ComponentName(this, VoiceRecognitionService.class));
         speechRecognizer.setRecognitionListener(this);
 
-        if (Build.VERSION.SDK_INT >= 23){
-            int checkRecordPermission = ContextCompat.checkSelfPermission(BaiduSpeechActivity.this, Manifest.permission.RECORD_AUDIO);
-            if (checkRecordPermission != PackageManager.PERMISSION_GRANTED){
-                requestPermissions(new String[]{Manifest.permission.RECORD_AUDIO}, 123);
-            }
-        }
-        requestPermissions(new String[]{Manifest.permission.RECORD_AUDIO}, 123);
+
 
         speechTips = View.inflate(this, R.layout.bd_asr_popup_speech, null);
         speechWave = speechTips.findViewById(R.id.wave);
@@ -73,6 +67,12 @@ public class BaiduSpeechActivity extends Activity implements RecognitionListener
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
+                        if (Build.VERSION.SDK_INT >= 23){
+                            int checkRecordPermission = ContextCompat.checkSelfPermission(BaiduSpeechActivity.this, Manifest.permission.RECORD_AUDIO);
+                            if (checkRecordPermission != PackageManager.PERMISSION_GRANTED){
+                                requestPermissions(new String[]{Manifest.permission.RECORD_AUDIO}, 123);
+                            }
+                        }
                         speechTips.setVisibility(View.VISIBLE);
                         speechRecognizer.cancel();
                         Intent intent = new Intent();

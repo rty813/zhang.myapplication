@@ -31,7 +31,8 @@
         <service android:name="com.baidu.speech.VoiceRecognitionService" android:exported="false" />
 
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" android:theme="@style/LaunchStyle">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
