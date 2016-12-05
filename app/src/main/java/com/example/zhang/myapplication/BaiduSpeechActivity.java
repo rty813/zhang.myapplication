@@ -5,10 +5,14 @@ import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.speech.RecognitionListener;
 import android.speech.SpeechRecognizer;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -47,13 +51,18 @@ public class BaiduSpeechActivity extends Activity implements RecognitionListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_baidu_speech);
 
-//        requestPermissions(new String[]{
-//                Manifest.permission.RECORD_AUDIO
-//        }, YOUR_REQUEST_CODE);
         txtResult = (TextView) findViewById(R.id.txtResult);
         txtLog = (TextView) findViewById(R.id.txtLog);
         speechRecognizer = SpeechRecognizer.createSpeechRecognizer(this, new ComponentName(this, VoiceRecognitionService.class));
         speechRecognizer.setRecognitionListener(this);
+
+        if (Build.VERSION.SDK_INT >= 23){
+            int checkRecordPermission = ContextCompat.checkSelfPermission(BaiduSpeechActivity.this, Manifest.permission.RECORD_AUDIO);
+            if (checkRecordPermission != PackageManager.PERMISSION_GRANTED){
+                requestPermissions(new String[]{Manifest.permission.RECORD_AUDIO}, 123);
+            }
+        }
+        requestPermissions(new String[]{Manifest.permission.RECORD_AUDIO}, 123);
 
         speechTips = View.inflate(this, R.layout.bd_asr_popup_speech, null);
         speechWave = speechTips.findViewById(R.id.wave);
