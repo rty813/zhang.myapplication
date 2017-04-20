@@ -132,4 +132,13 @@
         android:layout_alignStart="@+id/btnStartHttpActivity"
         android:id="@+id/btnStartBaiduSpeechActivity" />
 
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_appbar"
+        android:layout_above="@+id/btnStartSocketActivity"
+        android:layout_alignLeft="@+id/btnStartSocketActivity"
+        android:layout_alignStart="@+id/btnStartSocketActivity" />
+
 </RelativeLayout>
